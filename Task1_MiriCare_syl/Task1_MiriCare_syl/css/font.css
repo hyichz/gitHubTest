@@ -1,0 +1,92 @@
+/*Font size in px*/
+.f_6px  { font-size: 6px  !important;}
+.f_8px  { font-size: 8px  !important;}
+.f_10px { font-size: 10px !important;}
+.f_12px { font-size: 12px !important;}
+.f_14px { font-size: 14px !important;}
+.f_16px { font-size: 16px !important;}
+.f_18px { font-size: 18px !important;}
+.f_20px { font-size: 20px !important;}
+.f_22px { font-size: 22px !important;}
+.f_24px { font-size: 24px !important;}
+.f_26px { font-size: 26px !important;}
+.f_28px { font-size: 28px !important;}
+.f_30px { font-size: 30px !important;}
+.f_32px { font-size: 32px !important;}
+.f_34px { font-size: 34px !important;}
+.f_36px { font-size: 36px !important;}
+.f_38px { font-size: 38px !important;}
+.f_40px { font-size: 40px !important;}
+.f_42px { font-size: 42px !important;}
+.f_44px { font-size: 44px !important;}
+.f_46px { font-size: 46px !important;}
+.f_48px { font-size: 48px !important;}
+.f_50px { font-size: 50px !important;}
+
+
+/*Font size in em*/
+.f_01em { font-size: 0.1em !important;}
+.f_02em { font-size: 0.2em !important;}
+.f_03em { font-size: 0.3em !important;}
+.f_04em { font-size: 0.4em !important;}
+.f_05em { font-size: 0.5em !important;}
+.f_06em { font-size: 0.6em !important;}
+.f_07em { font-size: 0.7em !important;}
+.f_08em { font-size: 0.8em !important;}
+.f_09em { font-size: 0.9em !important;}
+.f_10em { font-size: 1em !important;}
+.f_20em { font-size: 2em !important;}
+.f_30em { font-size: 3em !important;}
+.f_40em { font-size: 4em !important;}
+.f_50em { font-size: 5em !important;}
+.f_60em { font-size: 6em !important;}
+.f_70em { font-size: 7em !important;}
+.f_80em { font-size: 8em !important;}
+.f_90em { font-size: 9em !important;}
+.f_100em { font-size: 10em !important;}
+
+
+/*Font weight*/
+.f_bold{ font-weight: bold !important;}
+.f_bolder{ font-weight: bolder !important;}
+.f_lighter{ font-weight: lighter !important;}
+.f_100{ font-weight: 100 !important;}
+.f_200{ font-weight: 200 !important;}
+.f_300{ font-weight: 300 !important;}
+.f_400{ font-weight: 400 !important;}
+.f_500{ font-weight: 500 !important;}
+.f_600{ font-weight: 600 !important;}
+.f_700{ font-weight: 700 !important;}
+.f_800{ font-weight: 800 !important;}
+.f_900{ font-weight: 900 !important;}
+
+
+/*Font line height*/
+.f_lh_40{ line-height: 40% !important;}
+.f_lh_50{ line-height: 50% !important;}
+.f_lh_60{ line-height: 60% !important;}
+.f_lh_70{ line-height: 70% !important;}
+.f_lh_80{ line-height: 80% !important;}
+.f_lh_90{ line-height: 90% !important;}
+.f_lh_100{ line-height: 100% !important;}
+.f_lh_110{ line-height: 110% !important;}
+.f_lh_120{ line-height: 120% !important;}
+.f_lh_130{ line-height: 130% !important;}
+.f_lh_140{ line-height: 140% !important;}
+.f_lh_150{ line-height: 150% !important;}
+.f_lh_160{ line-height: 160% !important;}
+.f_lh_170{ line-height: 170% !important;}
+.f_lh_180{ line-height: 180% !important;}
+
+
+/*Font case*/
+.f_none{ text-transform: none !important;}
+.f_uppercase{ text-transform: uppercase !important;}
+.f_lowercase{ text-transform: lowercase !important;}
+.f_capitalize{ text-transform: capitalize !important;}
+
+
+/*F7 have other align except this two*/
+.f_align_top{ vertical-align:top !important;}
+.f_align_middle{ vertical-align:middle !important;}
+.f_align_bottom{ vertical-align:bottom !important;}

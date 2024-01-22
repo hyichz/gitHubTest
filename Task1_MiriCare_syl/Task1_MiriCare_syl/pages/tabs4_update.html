@@ -1,0 +1,92 @@
+<template>
+	<div class="page">
+		<div class="page-content no-padding b_color_white_FFFFFF">
+			<!----- Update Remark Page------>
+			<div class="block">
+				<div class="block-title"><strong>Remarks</strong></div>
+				<textarea class="padding-bottom" placeholder="Type your remarks here.." style="width:100%; height: 20vh; border-bottom: 1px solid #D0D0D0 !important;"></textarea>
+				<div class="row" style="padding: 10px;"></div>
+				<!--- Label for input file--->
+				<div class="image-upload padding b_color_gray_F0F2F4 text-align-center" style="width: 8vh; height: 7vh;">
+					<label for="file-input" class="f_color_grey_747677">				
+						<i class="icon f7-icons">camera</i>
+						<p style="line-height: 1px;">Add</p>					
+					</label>
+					<input id="file-input" style="display: none;" type="file"/>
+				</div>
+			</div>
+			<!---- Submit button--->
+			<div class="block padding">
+				<input type="submit" class="button button-round button-fill text-align-center f_18px f_capitalize padding b_color_blue_337ADF" style="width:40%; height: 1%; margin: auto;" value="Submit">			
+			</div>
+
+			<!----- Card to open popup sliding up---->
+			<div class="card" style="border-radius: 15px; top: 100px;">
+				<div class="card-content card-content-padding b_color_gray_F0F2F4 text-align-center margin-top" style="border-radius: 15px;">
+					<a class="button popup-open f_color_black f_capitalize" href="#" data-popup=".popup-remarks"><strong>View submitted remarks</strong></a>
+				</div>
+			</div>	
+			<!----- Popup for submitted remarks---->
+			<div class="popup popup-remarks">
+				<div class="block">
+					<!-- Close Popup -->
+					<div class="row no-gap">
+						<div class="col"><a class="link popup-close f_color_black" href="#"><i class="icon f7-icons">xmark</i></a></div>
+						<div class="col text-align-center">Submitted Remarks</div>
+						<div class="col"></div>	
+					</div>					
+				</div>
+				<!----- Media list for submitted remarks------>
+				<div class="block">
+					<div class="list media-list">
+						{{#each remark}}
+						<ul>
+							<li>
+								<a href="#" class="item-link item-content">
+									<div class="item-inner">
+										<div class="item-title-row">
+											<div class="item-title"><strong>{{remark_no}}</strong></div>
+											<div class="item-after f_color_black"><strong>{{remark_date}}</strong></div>
+										</div>
+										<div class="item-text">{{remark_description}}</div>
+										<div class="item-media"><img src="{{photo_url}}" class="padding-right" width="80"/> <img src="{{photo_url}}" class="padding-right" width="80"/></div>
+									</div>
+								</a>
+							</li>
+						</ul>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</template>
+
+<script>
+	return{
+		data: function(){
+			return{
+				remark : [
+				{
+					remark_no:'#1',
+					remark_date:'09/12/2019 0505PM',
+					remark_description: 'Lorem ipsum dolor sit amet, definitiones vel ea, ei pri soleat sanctus ullamcorper'
+
+				},
+				{
+					remark_no:'#2',
+					remark_date:'09/12/2019 0505PM',
+					remark_description:'Lorem ipsum dolor sit amet, definitiones vel ea, ei pri soleat sanctus ullamcorper',
+					photo_url:'img/mountains.jpg'
+				},
+
+				]
+			}
+		},
+		methods:{},
+		on:{},
+	}
+
+</script>
+

@@ -1,0 +1,64 @@
+<template>
+
+  <div class="page">
+
+    <!-------- Top Navbar ------>
+    <div class="navbar">
+      <div class="navbar-bg b_color_blue_337ADF"></div>
+      <div class="navbar-inner">
+        <div class="left"><a href="/" class="f_color_white"><i class="icon f7-icons">arrow_left</i></a></div>
+        <div class="title f_color_white">Contacted Cases</div>
+        <div class="right f_color_white"><i class="icon f7-icons">ellipsis_horizontal</i></div>
+      </div>
+    </div>
+
+
+    <div class="block block_strong b_color_white_FFFFFF padding-top">
+
+      <!-- Searchbar -->
+      <form data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-init padding-top">
+        <div class="searchbar-inner">
+          <div class="searchbar-input-wrap">
+            <input type="search" placeholder="Search"/>
+            <i class="searchbar-icon"></i>
+            <span class="input-clear-button"></span>
+          </div>
+          <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+        </div>
+      </form>
+      <div class="searchbar-backdrop"></div>
+
+      <!--horizontal slider icon---->
+      <div class="row no-gap padding-vertical">
+        <div class="col-33"></div>
+        <div class="col-33"></div>
+        <div class="col-33 text-align-right">
+          <i class="icon f7-icons f_color_gray_A9A9A9">slider_horizontal_3</i></div></div>
+
+          <!----- Routable tabbar---->
+          <div class="toolbar tabbar toolbar-bottom">
+            <div class="toolbar-inner">
+              <a href="tab1/" class="tab-link f_capitalize" data-route-tab-id="tab1_new">New</a>
+              <a href="./" class="tab-link f_capitalize" data-route-tab-id="tab2_inprogress">In Progress</a>
+              <a href="tab3/" class="tab-link f_capitalize" data-route-tab-id="tab3_due">Due</a>
+              <a href="tab4/" class="tab-link f_capitalize" data-route-tab-id="tab4_expired">Expired</a>
+              <a href="tab5/" class="tab-link f_capitalize" data-route-tab-id="tab5_solved">Solved</a>  
+            </div>
+          </div>
+
+        </div>
+        <!--- Tabs routed to seperate page--->
+        <div class="tabs-animated-wrap">
+          <div class="tabs tabs-routable">
+            <div class="page-content tab" id="tab1_new"></div>
+            <div class="page-content tab" id="tab2_inprogress"></div>
+            <div class="page-content tab" id="tab3_due"></div>
+            <div class="page-content tab" id="tab4_expired"></div>
+            <div class="page-content tab" id="tab5_solved"></div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </template>

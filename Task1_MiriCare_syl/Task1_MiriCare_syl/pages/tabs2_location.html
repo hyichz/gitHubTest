@@ -1,0 +1,45 @@
+<template>
+	<div class="page">
+		<div class="page-content b_color_white_FFFFFF no-padding">
+			<!-----Map for case location--->
+			<div id="googleMap" style="width:100%;height:400px;"></div>
+
+			{{#each Mymap}}
+			<script src="https://maps.googleapis.com/maps/api/js?key={{api_key}}&callback=myMap"></script>	<script>
+				function myMap() {
+
+					var mapProp= {
+						center: new google.maps.LatLng(4.387830,113.985050),
+						zoom:10,
+					};
+					var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				}
+			</script>
+
+			<div class="block">
+				<div class="row no-gap f_20px">Address</div>
+				<div class="row padding-bottom f_18px">{{map_address}}</div>
+			</div>
+			{{/each}}
+
+			<button class="button button-small button-round button-fill text-align-center f_16px f_capitalize b_color_blue_337ADF" style="width:50%;height:5%; margin: auto;">Get Direction</button>
+	
+		</div>
+	</div>
+</template>
+
+
+<script>
+	return{
+		data: function(){
+			return{
+				Mymap:[{
+					map_address:'88, Jalan Kubu, 93150 Miri, Sarawak',
+					api_key:'AIzaSyD-lGYDJZqH2SlFZD7_9bgndm3RMj2y3Yg'
+				}],
+			}
+		},
+		methods:{},
+		on:{}
+	}
+</script>

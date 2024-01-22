@@ -1,0 +1,57 @@
+<template>
+	<div class="page">
+    
+   <!--Media list for contacted case-->
+   <div class="block no-padding-vertical">
+    {{#each case_detail}}
+    <div class="list media-list">
+      <ul>
+        <li>
+         <a href="{{link_case_detail}}" class="item-link item-content">
+          <div class="item-inner">
+            <div class="item-title-row">
+              <div class="item-title"><strong>{{case_request}}</strong></div>
+              <div class="item-after">{{case_date}}</div>
+            </div>
+            <div class="item-text">{{case_reference}}</div>
+            <div class="item-text">{{case_description}}</div>
+          </div>
+        </a>
+      </li>         
+    </ul>
+  </div>
+  {{/each}}
+</div>
+
+</div>
+</template>
+
+
+<script>
+  return{
+    data: function(){
+      return{
+        case_detail : [
+        {
+          link_case_detail:'/view_case_detail/',
+          case_request:'Request Service',
+          case_date:'09/04/2020',
+          case_reference: 'Ref no 202000213-001',
+          case_description:'Overgrown at jalan Marina backlane...'
+        },
+        {
+          link_case_detail:'/view_case_detail/',
+          case_request:'Request Service',
+          case_date:'10/02/2020',
+          case_reference: 'Ref no 202000213-001',
+          case_description:'Overgrown at jalan Marina backlane...'
+        },
+
+        ]
+      }
+    },
+    methods:{},
+    on:{},
+  }
+
+</script>

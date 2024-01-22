@@ -1,0 +1,80 @@
+/**************/
+/* Font Color */
+/**************/
+.f_color_gray_A9A9A9{
+	color: #A9A9A9 !important;
+}
+
+.f_color_blue_5184CC{
+	color:#5184CC !important;
+}
+
+.f_color_pink_D82C6C{
+	color: #D82C6C !important;
+}
+
+.f_color_white{
+	text-decoration: none;
+	color: white !important;
+}
+
+.f_color_pink_D30E58{
+	color: #D30E58 !important;
+}
+
+.f_color_black{
+	text-decoration: none;
+	color: black !important;
+}
+
+.f_color_grey_747677{
+	color: #747677 !important;
+}
+
+
+/********************/
+/* Background Color */
+/********************/
+.b_color_gray_A9A9A9{
+	background-color: #A9A9A9 !important;
+}
+
+.b_color_gray_EDF1F2{
+	background-color: #EDF1F2 !important;
+}
+
+.b_color_blue_5184CC{
+	background-color: #5184CC;
+}
+
+.b_color_purple_B53893{
+	background-color: #B53893 !important;
+}
+
+.b_color_white_FFFFFF{
+	background-color: #FFFFFF !important;
+}
+
+.b_color_blue_337ADF{
+	background-color: #337ADF !important;
+}
+
+.b_color_gray_F0F2F4{
+	background-color: #F0F2F4 !important;
+
+}
+
+.b_color_lightgrey_E4EAEE{
+	background-color: #E4EAEE !important;
+}
+
+/*******************/
+/* SVG image Color */
+/*******************/
+/*https://stackoverflow.com/a/53336754*/
+.svg_color_blue_19B3CF{
+	filter: invert(61%) sepia(76%) saturate(543%) hue-rotate(144deg) brightness(86%) contrast(88%);
+}
+
+
+

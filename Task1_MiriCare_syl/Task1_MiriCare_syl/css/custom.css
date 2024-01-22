@@ -1,0 +1,83 @@
+/***********/
+/* Default */
+/***********/
+
+/*use color to check any border outline*/
+.border_check{
+	border: 2px solid #73AD21;
+}
+
+/*vertical align content*/
+.align_vertical{
+	/*same with class="display-flex align-items-center justify-content-center"*/
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+/*hr line color*/
+.custom_hr_gray{
+	border: none;
+	border-top: 1px solid #5A5A5A;
+}
+
+
+
+/*************************/
+/*Custom for this project*/
+/*************************/
+
+.dot {
+  height: 14px;
+  width: 13px;
+  background-color: #337ADF !important;
+  border-radius: 50%;
+  display: inline-block;
+  display: relative;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/******************/
+/*Some tweak on F7*/
+/******************/
+:root {
+	--f7-photobrowser-bars-text-color: #FFF;/*fix photo browser bug with default dark theme will have dark font*/
+	--f7-navbar-title-line-height: 1.4; /*title bug*/
+}
+
+/*remove dialog shadow to make it laod faster*/
+.ios {
+	--f7-dialog-box-shadow: none;
+	--f7-popup-box-shadow: none;
+}
+.md {
+	--f7-dialog-box-shadow: none;
+	--f7-popup-box-shadow: none;
+}
+.aurora {
+	--f7-dialog-box-shadow: none;
+	--f7-popup-box-shadow: none;
+}
+
+/*make dialog have curve corner, capitalize text, and custom width*/
+.md{
+	--f7-dialog-width: 230px;
+	--f7-dialog-button-text-transform: capitalize;
+	--f7-dialog-border-radius: 13px;
+}
+
+/*center the toast's text when it has 2nd line*/
+.toast {
+	text-align: center;
+}

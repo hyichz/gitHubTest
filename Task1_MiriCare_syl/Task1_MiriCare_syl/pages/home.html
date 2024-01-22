@@ -1,0 +1,143 @@
+<template>
+	<div class="page">
+		<!-- Top Navbar -->
+		<div class="navbar">
+			<div class="navbar-bg b_color_white_FFFFFF"></div>
+			<div class="navbar-inner">
+				<div class="left f_color_blue_5184CC"><strong>MiriCARES</strong></div>
+				<div class="right">
+					<i class="icon f7-icons if-not-md">search</i>
+					<i class="icon material-icons md-only">search</i>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scrollable page content -->
+		<div class="page-content">
+			<div class="block b_color_gray_EDF1F2">
+				<!-- Block for Graphical data-->
+				<div class="block-title">Statistics</div>
+				<div class="col text-align-center">
+					<div
+					class="gauge gauge-init"
+					data-type="circle"
+					data-value="0.75"
+					data-value-text="5"
+					data-value-text-color="#black"
+					data-border-color="#C6C7C8"
+					data-label-text="Out of 8 cases"
+					data-label-text-color="grey"
+					data-label-font-weight="700"
+					data-border-bg-color="#B53893"
+					>
+					<p style="position: absolute; line-height: 800%; width: 100%; color: #B53893;">
+						<strong>Solved</strong>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="block block-strong no-padding-top">
+			<div class="list media-list padding-top">
+				<!-----Alerts media list------>
+				<ul>
+					<li>
+						<div class="card">
+							<div class="card-content card-content-padding b_color_purple_B53893" style="border-radius: 8px;">
+								<a href="/contacted_case/" class="f_color_white"> <i class="icon f7-icons size-50">bell</i> Alerts</a>
+							</div>
+						</div>
+
+						{{#each alert_detail}}
+						<a href="{{alert_link}}" class="item-link item-content">
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-header"><strong>{{alert_reference}}</strong>
+										<span class="badge">{{alert_type}}</span>
+									</div>
+									<div class="item-after f_color_pink_D82C6C"><strong>{{alert_tag}}</strong></div>
+								</div>
+								<div class="item-footer">{{alert_description}}</div>
+							</div>
+						</a>
+						{{/each}}
+
+					</li>
+				</ul>
+				<!--New cases media lists-->
+				<ul>
+					<li>
+						<div class="card">
+							<div class="card-content card-content-padding b_color_blue_5184CC" style="border-radius: 8px;"><a href="/contacted_case/" class="f_color_white"><i class="icon f7-icons size-50">folder</i> New Cases </a></div>
+						</div>
+						
+						{{#each new_case_detail}}
+						<a href="{{ncase_link}}" class="item-link item-content">
+							<div class="item-inner">
+								<div class="item-title-row">
+									<div class="item-header"><strong>{{ncase_reference}}</strong>
+										<span class="badge">{{ncase_type}}</span>
+									</div>
+									<div class="item-after"><strong>{{ncase_tag}}</strong></div>
+								</div>
+
+								<div class="item-footer">{{ncase_description}}</div>
+							</div>
+						</a>
+						{{/each}}
+
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+</template>
+
+<script>
+	return{
+		data:function(){
+			return{
+
+				alert_detail:[
+				{
+					alert_link: '/contacted_case/',
+					alert_reference:'20200013-001',
+					alert_type:'complaint',
+					alert_tag:'Exceeded TAT',
+					alert_description:'Overgrown grass at Jalan Marina'
+				},
+				{
+					alert_link: '/contacted_case/',
+					alert_reference:'20200013-001',
+					alert_type:'complaint',
+					alert_tag:'Due 4h21m',
+					alert_description:'Overgrown grass at Jalan Marina'
+				}
+				],
+				new_case_detail:[
+				{
+					ncase_link:'/contacted_case/',
+					ncase_reference:'20200013-001',
+					ncase_type:'complaint',
+					ncase_tag:'Expire 15 April',
+					ncase_description:'Overgrown grass at Jalan Marina'
+				},
+				{
+					ncase_link:'/contacted_case/',
+					ncase_reference:'20200013-001',
+					ncase_type:'complaint',
+					ncase_tag:'Expire 15 April',
+					ncase_description:'Overgrown grass at Jalan Marina'
+				}
+				]
+
+			}
+		},
+		method:{},
+		on:{},
+	}
+</script>
+

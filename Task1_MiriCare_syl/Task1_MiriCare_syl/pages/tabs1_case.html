@@ -1,0 +1,116 @@
+<template>
+	<div class="page b_color_white_FFFFFF">
+        <!----Timeline block---->
+        <div class="block">
+            <div class="card">
+                <div class="card-content card-content-padding b_color_lightgrey_E4EAEE" style="border-radius: 9px;">
+                    <p>Case Status</p>
+                    <!-- Timeline for case status-->
+                    <div class="timeline">
+                        <!-- Timeline item for first period-->
+                        <div class="timeline-item">
+                            <div class="timeline-item-divider"><span class="dot"></span></div>
+                            <div class="timeline-item-content">
+                                <div class="timeline-item-title"><strong>In Progress</strong></div>
+                                <div class="timeline-item-subtitle f_color_pink_D30E58">
+                                    <strong>Awaiting material delivery</strong></div>    
+                                </div>
+                            </div>
+                            <div class="timeline-item"><!---- Timeline for second period---->
+                                <div class="timeline-item-divider b_color_white_FFFFFF"></div>
+                                <div class="timeline-item-content" style="color: grey;">Solved</div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--- Case date block----->
+            <div class="block">
+                <div class="row no-gap" style="border-bottom: 1px solid grey !important;">
+                    {{#each case_period}}
+                    <div class="col">
+                        <div class="row justify-content-center">Due Date</div>
+                        <div class="row padding-bottom justify-content-center"><strong>{{cdue_date}}</strong></div>
+                    </div>
+                    <div class="col">
+                        <div class="row justify-content-center" style="border-left: 1px solid grey !important;">Expire in</div>
+                        <div class="row padding-bottom justify-content-center f_color_pink_D30E58" style="border-left: 1px solid grey !important;"><strong>{{cexpire_date}}</strong></div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            <!--single collapsible element block for case details-->
+            <div class="block">
+                <div class="accordion-item">
+                    <div class="accordion-item-toggle">Case Details 
+                        <i class="f7-icons padding-top" style="font-size: 10px;">chevron_down</i>
+                    </div>
+                    <div class="accordion-item-content">
+                        <div class="block no-hairlines padding b_color_lightgrey_E4EAEE">
+                            {{#each view_cdetail}}
+                            <div class="row no-gap"><!---row 1-->
+                                <div class="col no-gap">Received</div>
+                                <div class="col no-gap text-align-right"><strong>{{received_cdate}}</strong></div>
+                            </div> 
+                            <div class="row no-gap"><!---row 2-->
+                                <div class="col no-gap">Case Classification</div>
+                                <div class="col no-gap text-align-right"><strong>{{case_classification}}</strong></div>
+                            </div>
+                            <div class="row no-gap"><!---row 3-->
+                                <div class="col no-gap">Category</div>
+                                <div class="col no-gap text-align-right"><strong>{{type_case}}</strong></div>
+                            </div>
+                            <div class="row no-gap padding-top">Case duration</div><!--row 4-->
+                            <div class="row no-gap text-align-center" style="border-bottom: 1px solid grey !important; padding-top: 10px;">
+                                <div class="col no-gap"><strong>{{cd_month}}</strong></div>
+
+                                <div class="col no-gap" style="border-left: 1px solid grey !important; border-right: 1px solid grey !important;"><strong>{{cd_day}}</strong></div>
+
+                                <div class="col no-gap" style="border-right: 1px solid grey !important;"><strong>{{cd_hour}}</strong></div>
+
+                                <div class="col no-gap"><strong>{{cd_minute}}</strong></div>
+                            </div>
+                            <div class="row no-gap padding-top">Description</div>
+                            <div class="row no-gap"><strong>{{cdescription}}</strong></div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>    
+
+            </div>
+
+        </div>
+    </template>
+
+
+    <script>
+        return{
+            data: function(){
+                return{
+                    case_period: [
+                    {
+                        cdue_date:'15/05/2020',
+                        cexpire_date:'20 Days',
+                    }
+                    ],
+
+                    view_cdetail: [
+                    {
+                        received_cdate:'09/12/2019 03:30PM',
+                        case_classification:'Normal',
+                        type_case:'complaint',
+                        cd_month:'3 months',
+                        cd_day:'17 days',
+                        cd_hour:'18 hours',
+                        cd_minute:'6 minutes',
+                        cdescription:'Drainage block behind shoplot of i Square'
+                    }
+                    ]
+                }
+            },
+            methods:{},
+            on:{},
+        }
+    </script>
